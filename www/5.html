@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body bgcolor="pink">
+
+
+ <form>
+
+ <fieldset>
+
+ 	<p align="center">My Diary</p>
+ 	<p align="center">Month: September</p>
+
+ 	<br>
+
+ 	<p>Day5</p>
+ 	<hr width=100% size=10%>
+ 	<br>
+
+ 	
+<script>
+	function addSave(){
+	var name1 = document.getElementById('name5').value;
+	if (name1=='') {
+		alert('You must type something here')
+	}
+	else{
+		window.localStorage.setItem('name5', document.getElementById("name5").value);
+	document.getElementById("name3").value=null;
+	}}
+	function back(){
+		var name1 = document.getElementById('name5').value;
+	if (name1=='') {
+		alert('You must type something here')
+	}else{
+				document.getElementById('name5').value=window.localStorage['name5'];}
+
+		}
+	</script>
+	
+<center><textarea id="name5" cols=30 rows=20 placeholder="Type here:" style="resize: none"></textarea></center>
+
+
+	<center>
+ 	<input type="submit" value="save" onclick="addSave()"> 
+ <button type="button" onclick="back()">Back Again</button> 
+ 	<input type="button" value="Next" onclick="window.open('6.html', '_self')"='#top';">
+	</center>
+
+ </fieldset>
+
+
+
+ </form>
+</body>
+</html>
